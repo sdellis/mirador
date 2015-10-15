@@ -115,7 +115,7 @@
             return {
                 annotations: state.annotations,
                 selected: state.selectedAnno,
-                postion: state.position,
+                position: state.position,
                 open: state.open,
                 size:  state.size
             };
