@@ -15,7 +15,7 @@
             var _this = this;
 
             this.state({
-                position: 'bottom',
+                position: 'right',
                 title: 'untitled',
                 annotations: [],
                 selectedAnno: null,
