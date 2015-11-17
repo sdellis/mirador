@@ -15,7 +15,7 @@
             var _this = this;
 
             this.state({
-                position: 'bottom',
+                position: 'right',
                 title: 'untitled',
                 annotations: [],
                 selectedAnno: null,
@@ -51,9 +51,10 @@
           var _this = this,
               state = this.state();
 
-          var window = $.viewer.workspace.windows.map(function(window){
-                if(window.id == _this.windowId){ return window; }
-              });
+          var window = $.viewer.workspace.windows
+            // Return array of only those 'windows' whose ID matches the current window ID
+            .filter(function(window) { return window.id == _this.windowId; }
+          );
 
           if(listId === null){
             state.annotations = window[0].annotationsList;
@@ -115,7 +116,7 @@
             return {
                 annotations: state.annotations,
                 selected: state.selectedAnno,
-                postion: state.position,
+                position: state.position,
                 open: state.open,
                 size:  state.size
             };
